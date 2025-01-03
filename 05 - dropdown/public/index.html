@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link href="css/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 container xl:max-w-xl h-screen flex items-center justify-center flex-col">
+<div class="mb-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cupiditate dolorem, eum illum labore
+    laudantium
+    mollitia nesciunt numquam, officiis omnis provident quia unde voluptatum! Ab doloremque nihil numquam sed velit?
+</div>
+<div class="relative " x-data="{ isOpen: false }">
+    <button @click="isOpen=!isOpen"
+            class=" z-10 relative bg-blue-500 text-white font-bold py-2 px-4 rounded-xl hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white inline-flex items-flex items-center">
+        <span>Show more</span>
+        <svg class="size-6 w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"/>
+        </svg>
+    </button>
+    <button @click="isOpen=!isOpen" class="bg-gray-400 opacity-70 fixed inset-0" x-show="isOpen"></button>
+    <div class="bg-white w-56 overflow-hidden rounded-lg mt-2 border border-gray-200 absolute left-0" x-show="isOpen">
+        <a class="text-gray-700 block p-2 hover:bg-gray-200 " href="">Account</a>
+        <a class="text-gray-700 block p-2 hover:bg-gray-200 " href="">Support</a>
+        <a class="text-gray-700 block p-2 hover:bg-gray-200 " href="">Settings</a>
+    </div>
+</div>
+<script defer src="//cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.8/cdn.min.js"></script>
+</body>
+</html>
