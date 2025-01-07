@@ -7,15 +7,15 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      // padding: '2rem',
-      padding: {
+      padding: '2rem',
+      /*padding: {
         DEFAULT: '.5rem',
         sm: '1rem',
         md: '3rem',
         lg: '4rem',
         xl: '5rem',
         '2xl': '6rem',
-      },
+      },*/
     },
     extend: {
       fontFamily: {
@@ -23,6 +23,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 
